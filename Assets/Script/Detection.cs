@@ -28,8 +28,7 @@ public class Detection : MonoBehaviour
         
         if(exitDir.z > 0)
         {
-          //Spawn in objects
-          //ObjectSpawnManager.instance.SpawnObjects(_currentRoomSpawnArea, _objectsToSpawnIn);
+          
         }
         }
     }
