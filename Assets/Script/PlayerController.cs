@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
         Grounded();
         Jump();
         Move();
+
+        
     }
 
     private void Jump()
