@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public LayerMask layerMask;
     public bool grounded;
+    private int _numberOfJumps;
+    [SerializeField] private int maxNumberOfJumps = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,9 @@ public class PlayerController : MonoBehaviour
         {
             this.rb.AddForce(Vector3.up * 4, ForceMode.Impulse);
         }
+        
       
+
     }
 
     private void Grounded()
@@ -56,9 +60,10 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = this.transform.forward * verticalAxis + this.transform.right * horizontalAxis;
         movement.Normalize();
 
-        this.transform.position += movement * 0.1f;
+        this.transform.position += movement * 0.3f;
 
         this.anim.SetFloat("vertical", verticalAxis);
         this.anim.SetFloat("horizontal", horizontalAxis);
     }
+
 }
